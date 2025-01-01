@@ -3,23 +3,29 @@ print("Each player chooses a mystery character and then using yes or no question
 print("==========Good luck!==========")
 
 
-characters = ("messi","maradona","Pele","Cr7","R9","neymar","suarez","benzema","kaka","ronaldinho")
+characters = ("messi","maradona","pele","cristiano ronaldo","ronaldo nazario","neymar","suarez","benzema","kaka","ronaldinho")
 print(characters)
 
-player_1 = input("Enter your name: ")
-player_2 = input("Enter your name: ")
+player_1 = input("Player_1 enter your name: ")
+player_2 = input("Player_2 Enter your name: ")
 
 player_1_choice = input(f"{player_1},enter your choice from characters: ")
 player_2_choice = input(f"{player_2},enter your choice from characters: ")
 
-print("now we will decide who will start the game")
 
+print("Now randomizer decides who will start playing the game ")
 
 random_1 = (player_1,player_2)
 
 import random
 
 choice_1 = random.choice(random_1)
+
+if choice_1 == player_1:
+    print(f"{player_1} starts the game ")
+elif choice_1 == player_2:
+    print(f"{player_2} starts the game")
+
 
 def player_1_questions():
     print("You have to ask 5 questions")
@@ -42,7 +48,7 @@ def player_1_questions():
 
     input(f"{player_1},enter your last question question: ")
 
-    input(f"{player_2},yes/no")
+    input(f"{player_2},yes/no: ")
 
     decision_1 = input(f"{player_1},enter your decision: ")
 
@@ -53,7 +59,7 @@ def player_1_questions():
 
 def player_2_questions():
     
-    print(f"{player_1},now its your time to answer")
+    print(f"{player_1}, Its your time to answer")
 
     input(f"{player_2},enter your first question: ")
     
@@ -95,7 +101,6 @@ def main():
             player_1_questions()
         
 main()
-        
     
     
     
