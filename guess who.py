@@ -89,8 +89,6 @@ def player_2_questions():
         print(f"anwser was {player_1_choice}")
 
 
-def play_again_1():
-    again = input("Do you want to play again guys? yes/no: ")
 
 def main():
         if choice_1 == player_1:
